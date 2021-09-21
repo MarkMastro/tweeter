@@ -1,0 +1,33 @@
+section{
+  width:100%
+}
+form{
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+textarea{
+  display:block;
+  width:100%;
+  border-bottom:solid black 2px;
+  background-color: #f4f1ec;
+  
+}
+#tweet-bottom{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  border: solid green 5px;
+}
+
+.red-text{
+  color:red;
+}
+.black-text{
+  color: black;
+}
+p{
+  margin: 5px;
+}

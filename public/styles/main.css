@@ -1,0 +1,17 @@
+main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width:90%;
+  border:solid red 5px;
+}
+
+#tweets-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+  border:4px solid green
+}

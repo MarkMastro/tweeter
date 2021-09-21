@@ -1,0 +1,30 @@
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  height:120px;
+  background-color: #4056A1;
+  color:#FFFFFF;
+
+  
+}
+ span{
+  margin:1.5em ;
+}
+#nav-span-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:5px solid  blue;
+
+}
+h3{
+  margin:0px;
+}
+i{
+  color:red;
+}
