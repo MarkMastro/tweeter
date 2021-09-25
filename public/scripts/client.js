@@ -14,7 +14,15 @@ const tweetData = {
     },
   "created_at": 1461116232227
 }
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement=(tweetData)=>{
+
 let tweet=(  
 ` <article> 
 <header class="tweet-header">
@@ -25,14 +33,14 @@ let tweet=(
   <p>${tweetData.user.handle}</p>
   
 </header>
-<p class="tweet-text"> ${tweetData.content.text}</p>
+<p class="tweet-text"> ${escape(tweetData.content.text)}</p>
 <footer>
   <p>Tweeted ${timeago.format(tweetData.created_at)}</p>
   
-  <div class="tweet-buttons">
-    <i class="fa fa-flag"></i>
-    <i class="fa fa-retweet"></i>
-    <i class="fa fa-heart"></i>            
+  <div class="tweet-buttons tweet-icons">
+    <i class="fa fa-flag single-tweet-icon"></i>
+    <i class="fa fa-retweet single-tweet-icon"></i>
+    <i class="fa fa-heart single-tweet-icon"></i>            
   </div>
 </footer>
 </article>`)
@@ -43,7 +51,7 @@ return tweet
 const renderTweets=(tweets)=>{
   tweets.forEach(element => {
     $newTweet=createTweetElement(element);
-    $('#tweets-container').append($newTweet); 
+    $('#tweets-container').prepend($newTweet); 
 
   });
 }
@@ -54,47 +62,40 @@ const loadTweets=()=>{
       renderTweets(tweets)
     });
 }
-const getRecentTweet=()=>{
-  console.log('recent')
-  $.ajax('/tweets', { method: 'GET' })
-  .then(function (tweets) {
-    newestTweet=tweets[0]
-    for(let tweet in tweets){
-      if(tweets[tweet].created_at>newestTweet.created_at){
-        newestTweet=tweets[tweet]
-      }
-    }
-    $newTweet=createTweetElement(newestTweet);
-    $('#tweets-container').prepend($newTweet);
-    });
 
-}
+const errorFunction=(text)=>{
+   if(text===""|| text===null){
+      $("#error-msg").text("You have tried to submit an empty tweet")
 
-$(document).ready(function(){
-loadTweets()
-  $("#tweet-form").on('submit', function( event ) {
-    event.preventDefault();
-    let formText=event.target[0].value
-  const text=$("#tweet-text").val();
-    if(text===""|| text===null){
-      alert("You must enter a tweet to submit")
+      $("#error-div").slideDown( "slow")
+
     }else if(text.length>140){
-      alert('tweet must be longer than 140 characters')
-    }else{
+      $("#error-msg").text("tweet must be shorter than 140 characters")
+
+      $("#error-div").slideDown( "slow")
+
+      }else{
       console.log($("#tweet-form").serialize())
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: $("#tweet-form").serialize(),
-
-      success:getRecentTweet(),
-      
+      data: $("#tweet-form").serialize(),      
       error: function(error){
           console.log(error);
       }
-  });
+  })
+  .then(loadTweets())
   
   }
+}
+
+$(document).ready(function(){
+  loadTweets()//load tweets for user when page loads
+  $("#tweet-form").on('submit', function( event ) {
+    event.preventDefault();
+  const text=$("#tweet-text").val();
+  errorFunction(text)
+   
 
 });
 

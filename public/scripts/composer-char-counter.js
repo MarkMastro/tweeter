@@ -7,10 +7,11 @@ $(document).ready(function() {
     lettersLeft=140-e.target.value.length
     if(lettersLeft<0){
       $(".counter").removeClass("black-text")    
-      
       $(".counter").addClass('red-text')
+     
     }else if(lettersLeft>0){
         $(".counter").addClass("black-text")    
+
       }
     $(".counter").text(lettersLeft);
   });

@@ -31,3 +31,19 @@ textarea{
 p{
   margin: 5px;
 }
+.error-message-hide{
+  display:none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: red;
+  color:white
+}
+
+
+
+
+
+
+
+

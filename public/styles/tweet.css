@@ -22,7 +22,7 @@ article{
   height:40px;
   width:auto;
 }
-i:hover{
+.single-tweet-icon:hover{
   color:orange;
 }
 article:hover{
