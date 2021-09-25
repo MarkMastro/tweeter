@@ -62,6 +62,7 @@ const loadTweets=()=>{
       renderTweets(tweets)
     });
 }
+//Checks if any errors in the tweet, if there is shows the relevant error information. If not error, posts to ajax
 
 const errorFunction=(text)=>{
    if(text===""|| text===null){
@@ -91,10 +92,10 @@ const errorFunction=(text)=>{
 
 $(document).ready(function(){
   loadTweets()//load tweets for user when page loads
-  $("#tweet-form").on('submit', function( event ) {
+  $("#tweet-form").on('submit', function( event ) {//when tweet form is submitted, prevents default page load and checks for errors before tweeting 
     event.preventDefault();
-  const text=$("#tweet-text").val();
-  errorFunction(text)
+    const text=$("#tweet-text").val();
+    errorFunction(text)
    
 
 });

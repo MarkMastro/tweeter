@@ -11,6 +11,7 @@ $(document).ready(function() {
      
     }else if(lettersLeft>0){
         $(".counter").addClass("black-text")    
+        $("#error-div").slideUp( "slow")
 
       }
     $(".counter").text(lettersLeft);
