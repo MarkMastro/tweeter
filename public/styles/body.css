@@ -1,7 +1,19 @@
-body{
+.body{
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
   border:solid blue 2px;
+}
+
+
+
+@media only screen and (min-width: 768px){
+  .body{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:flex-start;
+    border:solid blue 2px;
+  }
 }

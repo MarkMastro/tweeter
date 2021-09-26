@@ -13,3 +13,9 @@ header{
 
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+@media  screen and (min-width:768px) {
+  header{
+  margin: 180px 115px;
+  }
+}

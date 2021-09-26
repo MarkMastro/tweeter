@@ -56,9 +56,11 @@ const renderTweets=(tweets)=>{
   });
 }
 const loadTweets=()=>{
+  
   console.log("loading....")
   $.ajax('/tweets', { method: 'GET' })
   .then(function (tweets) {
+      console.log(tweets)
       renderTweets(tweets)
     });
 }
@@ -83,9 +85,11 @@ const errorFunction=(text)=>{
       data: $("#tweet-form").serialize(),      
       error: function(error){
           console.log(error);
+      },
+      success: function(){
+        loadTweets();
       }
   })
-  .then(loadTweets())
   
   }
 }

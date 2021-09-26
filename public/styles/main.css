@@ -5,6 +5,8 @@ main{
   align-items: flex-start;
   width:90%;
   border:solid red 5px;
+  margin-top: 120px;
+
 }
 
 #tweets-container{
