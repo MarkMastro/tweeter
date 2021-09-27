@@ -4,18 +4,23 @@ header{
   justify-content: center;
   align-items: center;
   height:400px;
-  width:100vw;
+  width:100%;
+
   margin-top: 115px;
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  box-sizing: border-box;
+
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-@media  screen and (min-width:768px) {
+@media  screen and (min-width:1024px) {
   header{
-  margin: 180px 115px;
+  width:30%;
+
+  margin: 180px 20px;
   }
 }

@@ -8,6 +8,7 @@ nav{
   height:120px;
   background-color: #4056A1;
   color:#FFFFFF;
+  box-sizing: border-box;
 
   
 }
@@ -19,7 +20,7 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border:5px solid  blue;
+  box-sizing: border-box;
 
 }
 h3{

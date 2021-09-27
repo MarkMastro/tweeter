@@ -49,6 +49,7 @@ return tweet
 }
 
 const renderTweets=(tweets)=>{
+  $('#tweets-container').empty();
   tweets.forEach(element => {
     $newTweet=createTweetElement(element);
     $('#tweets-container').prepend($newTweet); 
@@ -60,7 +61,6 @@ const loadTweets=()=>{
   console.log("loading....")
   $.ajax('/tweets', { method: 'GET' })
   .then(function (tweets) {
-      console.log(tweets)
       renderTweets(tweets)
     });
 }
@@ -78,7 +78,6 @@ const errorFunction=(text)=>{
       $("#error-div").slideDown( "slow")
 
       }else{
-      console.log($("#tweet-form").serialize())
     $.ajax({
       url: '/tweets',
       type: 'POST',
