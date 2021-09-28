@@ -23,4 +23,3 @@ This repository is the starter code for the project: Students will fork and clon
 !["Empty Tweet Error"](docs/Empty_Tweet_Error.png)
 !["Over 140 Characters Error"](docs/Over_140_chars_error.png)
 !["Mobile Screenshot Header"](docs/Mobile_Picture_1.png)
-!["Mobile Screenshot Tweets"](docs/Mobile_Picture_2.png)
