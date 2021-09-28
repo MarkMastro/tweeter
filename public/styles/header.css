@@ -3,18 +3,18 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:400px;
+  height:220px;
   width:100%;
-
-  margin-top: 115px;
+  margin-top: 70px;
   background-color: orange;
-  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
-  box-sizing: border-box;
-
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+h2{
+  margin:0px;
 }
 
 @media  screen and (min-width:1024px) {

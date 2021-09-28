@@ -15,3 +15,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+!["Desktop Layout"](docs/Desktop_Layout.jpg)
+!["Tweet Counter in Action"](docs/Tweet_Counter.png)
+!["Empty Tweet Error"](docs/Empty_Tweet_Error.png)
+!["Over 140 Characters Error"](docs/Over_140_chars_error.png)
+!["Mobile Screenshot Header"](docs/Mobile_Picture_1.png)
+!["Mobile Screenshot Tweets"](docs/Mobile_Picture_2.png)
