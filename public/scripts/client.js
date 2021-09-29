@@ -58,7 +58,6 @@ const renderTweets=(tweets)=>{
 }
 const loadTweets=()=>{
   
-  console.log("loading....")
   $.ajax('/tweets', { method: 'GET' })
   .then(function (tweets) {
       renderTweets(tweets)
@@ -87,6 +86,7 @@ const errorFunction=(text)=>{
       },
       success: function(){
         loadTweets();
+        
       }
   })
   
@@ -99,7 +99,8 @@ $(document).ready(function(){
     event.preventDefault();
     const text=$("#tweet-text").val();
     errorFunction(text)
-   
+    $("#tweet-form")[0].reset();
+
 
 });
 
