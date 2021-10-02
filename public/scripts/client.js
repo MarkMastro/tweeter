@@ -87,7 +87,7 @@ const errorFunction=(text)=>{
       success: function(){
         loadTweets();
         
-      }
+      } 
   })
   
   }
@@ -100,6 +100,7 @@ $(document).ready(function(){
     const text=$("#tweet-text").val();
     errorFunction(text)
     $("#tweet-form")[0].reset();
+    $(".counter").text("140")
 
 
 });
